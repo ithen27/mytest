@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\temp\opengl\OpenGL\glfw\glfw-3.3\tests\reopen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\temp\opengl\OpenGL\glfw\glfw-3.3\deps\glad_gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\temp\opengl\OpenGL\glfw\glfw-3.3\deps\glad\gl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\temp\opengl\OpenGL\glfw\glfw-3.3\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{DB8BC601-DA9C-3E57-A376-15434BA3FB14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4AE1B40B-765C-336E-935B-B565F823FA19}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

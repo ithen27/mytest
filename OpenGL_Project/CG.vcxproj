@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bezier\BezierApp.cpp" />
+    <ClCompile Include="Camera\CameraApp.cpp" />
+    <ClCompile Include="lib\camera\Camera.cpp" />
+    <ClCompile Include="lib\imgui\imgui.cpp" />
+    <ClCompile Include="lib\imgui\imgui_demo.cpp" />
+    <ClCompile Include="lib\imgui\imgui_draw.cpp" />
+    <ClCompile Include="lib\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="lib\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="lib\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="lib\shader\shader.cpp" />
+    <ClCompile Include="lib\stb_image.cpp" />
+    <ClCompile Include="Light\Light.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OpenGL\glad\src\glad.c" />
+    <ClCompile Include="Points\Points.cpp" />
+    <ClCompile Include="Shadow\Shadow.cpp" />
+    <ClCompile Include="Transformation\Transformation.cpp" />
+    <ClCompile Include="triangles\Triangles.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Bezier\BezierApp.h" />
+    <ClInclude Include="Camera\CameraApp.h" />
+    <ClInclude Include="lib\camera\Camera.h" />
+    <ClInclude Include="lib\imgui\imconfig.h" />
+    <ClInclude Include="lib\imgui\imgui.h" />
+    <ClInclude Include="lib\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="lib\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="lib\imgui\imgui_internal.h" />
+    <ClInclude Include="lib\imgui\imstb_rectpack.h" />
+    <ClInclude Include="lib\imgui\imstb_textedit.h" />
+    <ClInclude Include="lib\imgui\imstb_truetype.h" />
+    <ClInclude Include="lib\shader\shader.h" />
+    <ClInclude Include="lib\stb_image.h" />
+    <ClInclude Include="Light\Light.h" />
+    <ClInclude Include="Points\Points.h" />
+    <ClInclude Include="Shadow\Shadow.h" />
+    <ClInclude Include="Transformation\Transformation.h" />
+    <ClInclude Include="triangles\Triangles.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\wood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Camera\glsl\cube.fs.glsl" />
+    <None Include="Camera\glsl\cube.vs.glsl" />
+    <None Include="GLSL\2D.fs.glsl" />
+    <None Include="GLSL\2D.vs.glsl" />
+    <None Include="Light\glsl\gouraudCube.fs.glsl" />
+    <None Include="Light\glsl\gouraudCube.vs.glsl" />
+    <None Include="Light\glsl\phongCube.fs.glsl" />
+    <None Include="Light\glsl\phongCube.vs.glsl" />
+    <None Include="Light\glsl\light.fs.glsl" />
+    <None Include="Light\glsl\light.vs.glsl" />
+    <None Include="Points\glsl\point.fs.glsl" />
+    <None Include="Points\glsl\point.vs.glsl" />
+    <None Include="Shadow\glsl\depth.fs.glsl" />
+    <None Include="Shadow\glsl\depth.vs.glsl" />
+    <None Include="Shadow\glsl\light.fs.glsl" />
+    <None Include="Shadow\glsl\light.vs.glsl" />
+    <None Include="Shadow\glsl\lightObject.fs.glsl" />
+    <None Include="Shadow\glsl\lightObject.vs.glsl" />
+    <None Include="Transformation\glsl\cube.fs.glsl" />
+    <None Include="Transformation\glsl\cube.vs.glsl" />
+    <None Include="triangles\glsl\color_tri.fs.glsl" />
+    <None Include="triangles\glsl\color_tri.vs.glsl" />
+    <None Include="triangles\glsl\textures.fs.glsl" />
+    <None Include="triangles\glsl\textures.vs.glsl" />
+    <None Include="triangles\glsl\tri.fs.glsl" />
+    <None Include="triangles\glsl\tri.vs.glsl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{DE740840-C9DA-438C-912B-8C262898A7F8}</ProjectGuid>
+    <RootNamespace>Triangles</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <ProjectName>OpenGL_CG</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\ProgramFiles\Work\OpenGL\include;..\OpenGL_Project\OpenGL\glad\include;..\OpenGL_Project\OpenGL\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\OpenGL_Project\OpenGL\glfw\libs;D:\ProgramFiles\Work\OpenGL\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>..\OpenGL_Project\OpenGL\include;..\OpenGL_Project\OpenGL\glad\include;..\OpenGL_Project\OpenGL\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\OpenGL_Project\OpenGL\libs;..\OpenGL_Project\OpenGL\glfw\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

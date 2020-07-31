@@ -1,0 +1,7 @@
+﻿  Building Custom Rule D:/temp/opengl/OpenGL/glfw/glfw-3.3/tests/CMakeLists.txt
+  CMake does not need to re-run because D:/temp/opengl/OpenGL/glfw/build/tests/CMakeFiles/generate.stamp is up-to-date.
+  empty.c
+  tinycthread.c
+  glad_gl.c
+  正在生成代码...
+  empty.vcxproj -> D:\temp\opengl\OpenGL\glfw\build\tests\Debug\empty.exe
