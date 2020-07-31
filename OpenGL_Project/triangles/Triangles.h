@@ -2,9 +2,12 @@
 
 #include "../application.h"
 
-class Triangles : public Application {
+class Triangles : public Application 
+{
 public:
-  void init(GLFWwindow* window) {
+	Triangles();
+  void init(GLFWwindow* window)
+  {
 
   }
   void input(GLFWwindow* window);
@@ -16,6 +19,12 @@ public:
   unsigned int drawWoodTriangles();
   unsigned int drawATriangles();
   unsigned int drawLine();
+
+  void updateWindowSize(int h, int w) 
+  {
+	  this->windowHeight = h;
+	  this->windowWidth = w;
+  }
 
   std::string title = "Triangles";
 private:
@@ -34,4 +43,7 @@ private:
   Shader* trianglesShader;
   Shader* changeColorShader;
   Shader* woodShader;
+
+  int windowHeight;
+  int windowWidth;
 };

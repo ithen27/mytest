@@ -5,6 +5,7 @@
 
 class ShadowApp : public Application {
 public:
+	ShadowApp() {};
   void init(GLFWwindow* window);
   void input(GLFWwindow* window);
   void render();
@@ -13,7 +14,15 @@ public:
   void randerCube(const Shader& shader);
   void randerPlane(const Shader& shader);
 
-  std::string title = "Camera";
+  std::string title = "ShadowApp";
+
+  void updateWindowSize(int h, int w)
+  {
+	  this->windowHeight = h;
+	  this->windowWidth = w;
+  }
+  int windowHeight;
+  int windowWidth;
 private:
   GLFWwindow* window;
   ImVec4 clear_color;

@@ -21,7 +21,13 @@ public:
   // »­µã
   void drawPoint();
   inline void addPoint(int x, int y);
-
+  void updateWindowSize(int h, int w)
+  {
+	  this->windowHeight = h;
+	  this->windowWidth = w;
+  }
+  int windowHeight;
+  int windowWidth;
 private:
   int draw_type;
   int canvas_size;

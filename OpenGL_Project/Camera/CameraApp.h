@@ -5,6 +5,7 @@
 
 class CameraApp : public Application {
 public:
+	CameraApp() {};
   void init(GLFWwindow* window);
   void input(GLFWwindow* window);
   void render();
@@ -12,6 +13,14 @@ public:
   void prepare();
 
   std::string title = "Camera";
+
+  void updateWindowSize(int h, int w)
+  {
+	  this->windowHeight = h;
+	  this->windowWidth = w;
+  }
+  int windowHeight;
+  int windowWidth;
 private:
   GLFWwindow* window;
   ImVec4 clear_color;

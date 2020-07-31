@@ -2,8 +2,10 @@
 
 #include "../application.h"
 
-class Transformation : public Application {
+class Transformation : public Application
+{
 public:
+	Transformation() {};
   void init(GLFWwindow* window) {
 
   }
@@ -13,6 +15,14 @@ public:
   void prepare();
 
   std::string title = "Transformation";
+
+  void updateWindowSize(int h, int w)
+  {
+	  this->windowHeight = h;
+	  this->windowWidth = w;
+  }
+  int windowHeight;
+  int windowWidth;
 private:
   ImVec4 clear_color;
 

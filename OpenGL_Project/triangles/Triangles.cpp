@@ -10,13 +10,25 @@
 
 #include "../lib/stb_image.h"
 
-void Triangles::input(GLFWwindow* window) {
-  if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+Triangles::Triangles()
+{
+	// 初始化背景颜色
+	//triangles_color = glm::vec3(0.4f, 0.35f, 0.80f);
+	//this->windowHeight = this->defaultHeight;
+	//this->windowWidth = this->defaultWidth;
+
+}
+
+void Triangles::input(GLFWwindow* window) 
+{
+  if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+  {
     glfwSetWindowShouldClose(window, true);
   }
 }
 
-void Triangles::render() {
+void Triangles::render() 
+{
 
   // ImGui 窗口
   {
@@ -39,7 +51,8 @@ void Triangles::render() {
   glClear(GL_COLOR_BUFFER_BIT);
 
   // 画三个彩色三角形
-  if (show_color_triangle) {
+  if (show_color_triangle) 
+  {
     trianglesShader->Use(); // 使用着色器
     glBindVertexArray(VAO_color_triangles);  // 使用预先设定的VAO
     // glDrawArrays(GL_TRIANGLES, 0, 3); // 画三角形
@@ -48,7 +61,8 @@ void Triangles::render() {
   }
 
   // 画一个奇形怪状三角形
-  if (show_a_triangle) {
+  if (show_a_triangle) 
+  {
     changeColorShader->Use();
     changeColorShader->SetColor("triColor", triangles_color);
     glBindVertexArray(VAO_a_triangles);
@@ -60,23 +74,26 @@ void Triangles::render() {
     glBindVertexArray(0);
   }
 
-  // 画一个木头纹理三角形
-  if (show_wood_triangle) {
-    woodShader->Use();
-    glBindVertexArray(VAO_wood_triangles);
-    glDrawArrays(GL_TRIANGLES, 0, 3);
-    glBindVertexArray(0);
+  // 画一个木头纹理三角形 todo
+  if (show_wood_triangle) 
+  {
+//     woodShader->Use();
+//     glBindVertexArray(VAO_wood_triangles);
+//     glDrawArrays(GL_TRIANGLES, 0, 3);
+//     glBindVertexArray(0);
   }
 }
 
-void Triangles::clear() {
+void Triangles::clear() 
+{
   glDeleteVertexArrays(1, &VAO_color_triangles);
   glDeleteVertexArrays(1, &VAO_a_triangles);
   glDeleteVertexArrays(1, &VAO_line);
   glDeleteVertexArrays(1, &VAO_wood_triangles);
 }
 
-void Triangles::prepare() {
+void Triangles::prepare()
+{
 
   // 画三个彩色三角形
   this->VAO_color_triangles = drawColorTriangles();
@@ -88,11 +105,11 @@ void Triangles::prepare() {
   this->VAO_line = drawLine();
   this->changeColorShader = new Shader("triangles/glsl/color_tri.vs.glsl", "triangles/glsl/color_tri.fs.glsl");
 
-  // 画一个木头三角
-  this->VAO_wood_triangles = drawWoodTriangles();
-  this->woodShader = new Shader("triangles/glsl/textures.vs.glsl", "triangles/glsl/textures.fs.glsl");
-  this->woodShader->Use();
-  this->woodShader->SetInt("ourTexture", 0);
+  // 画一个木头三角 todo
+//   this->VAO_wood_triangles = drawWoodTriangles();
+//   this->woodShader = new Shader("triangles/glsl/textures.vs.glsl", "triangles/glsl/textures.fs.glsl");
+//   this->woodShader->Use();
+//   this->woodShader->SetInt("ourTexture", 0);
 
 
   this->triangles_color = ImVec4(0.0, 1.0, 0.0, 1.0);
@@ -104,7 +121,8 @@ void Triangles::prepare() {
 }
 
 
-unsigned int Triangles::drawColorTriangles() {
+unsigned int Triangles::drawColorTriangles() 
+{
   // 顶点
   float vertices[] = {
     // 位置               // 颜色
@@ -119,7 +137,8 @@ unsigned int Triangles::drawColorTriangles() {
     0.5f, 0.8f, 0.0f,   1.0f, 0.0f, 0.0f,  // 上
   };
 
-  unsigned int indices[] = {
+  unsigned int indices[] = 
+  {
     0, 1, 2,
     1, 3, 4,
     4, 5, 6
@@ -154,7 +173,8 @@ unsigned int Triangles::drawColorTriangles() {
   return VAO;
 }
 
-unsigned int Triangles::drawWoodTriangles() {
+unsigned int Triangles::drawWoodTriangles()
+{
   // 生成纹理
   unsigned int texture;
   glGenTextures(1, &texture);

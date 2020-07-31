@@ -8,7 +8,7 @@ using std::string;
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "application.h"
-#include "triangles/triangles.h"
+#include "triangles/Triangles.h"
 #include "Points/Points.h"
 #include "Transformation/Transformation.h"
 #include "Camera/CameraApp.h"
@@ -19,22 +19,24 @@ using std::string;
 void framebuffer_size_callback(GLFWwindow* window, int w, int h);
 GLFWwindow* initWindow(Application* app, int height, int width);
 Application* app;
-int main() {
+int main() 
+{
   // 初始化
-  // Application *app = new Triangles();
-  // Application* app = new Points();
-  // Application* app = new Transformation();
-  // Application* app = new CameraApp();
+  //app = new Triangles();
+  //app = new Points();
+  //app = new Transformation();
+  //app = new CameraApp();
   // Application* app = new ShadowApp();
-  // Application* app = new ShadowApp();
-  app = new BezierApp();
+  app = new ShadowApp();
+  //app = new BezierApp();
 
   GLFWwindow* window = initWindow(app, app->defaultHeight, app->defaultWidth);
   if (window == NULL) return -1;
 
   app->prepare();
 
-  while (!glfwWindowShouldClose(window)) {
+  while (!glfwWindowShouldClose(window)) 
+  {
     app->input(window);
 
     ImGui_ImplOpenGL3_NewFrame();
@@ -67,13 +69,15 @@ int main() {
 }
 
 
-void framebuffer_size_callback(GLFWwindow* window, int w, int h) {
+void framebuffer_size_callback(GLFWwindow* window, int w, int h)
+{
   glViewport(0, 0, w, h);
   app->updateWindowSize(h, w);
   
 }
 
-GLFWwindow* initWindow(Application* app, int height, int width) {
+GLFWwindow* initWindow(Application* app, int height, int width) 
+{
   // 初始化GLFW
   glfwInit();
   // OpenGL 4.5
@@ -95,7 +99,8 @@ GLFWwindow* initWindow(Application* app, int height, int width) {
   // glfwSetWindowSizeLimits(window, width, height, width, height);
 
   // 初始化GLAD
-  if (!gladLoadGL()) {
+  if (!gladLoadGL()) 
+  {
     std::cout << "Failed to initialize GLAD" << std::endl;
     return NULL;
   }
