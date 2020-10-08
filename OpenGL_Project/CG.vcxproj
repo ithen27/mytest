@@ -32,8 +32,10 @@
     <ClCompile Include="lib\stb_image.cpp" />
     <ClCompile Include="Light\Light.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mrt\mrt.cpp" />
     <ClCompile Include="OpenGL\glad\src\glad.c" />
     <ClCompile Include="Points\Points.cpp" />
+    <ClCompile Include="Reflections\reflections.cpp" />
     <ClCompile Include="Shadow\Shadow.cpp" />
     <ClCompile Include="Transformation\Transformation.cpp" />
     <ClCompile Include="triangles\Triangles.cpp" />
@@ -54,7 +56,9 @@
     <ClInclude Include="lib\shader\shader.h" />
     <ClInclude Include="lib\stb_image.h" />
     <ClInclude Include="Light\Light.h" />
+    <ClInclude Include="Mrt\mrt.h" />
     <ClInclude Include="Points\Points.h" />
+    <ClInclude Include="Reflections\reflections.h" />
     <ClInclude Include="Shadow\Shadow.h" />
     <ClInclude Include="Transformation\Transformation.h" />
     <ClInclude Include="triangles\Triangles.h" />
@@ -73,8 +77,12 @@
     <None Include="Light\glsl\phongCube.vs.glsl" />
     <None Include="Light\glsl\light.fs.glsl" />
     <None Include="Light\glsl\light.vs.glsl" />
+    <None Include="Mrt\glsl\mrt.glsl" />
+    <None Include="Mrt\glsl\mrt.vs.glsl" />
     <None Include="Points\glsl\point.fs.glsl" />
     <None Include="Points\glsl\point.vs.glsl" />
+    <None Include="Reflections\glsl\reflections.fs.glsl" />
+    <None Include="Reflections\glsl\reflections.vs.glsl" />
     <None Include="Shadow\glsl\depth.fs.glsl" />
     <None Include="Shadow\glsl\depth.vs.glsl" />
     <None Include="Shadow\glsl\light.fs.glsl" />

@@ -70,6 +70,18 @@
     <Filter Include="源文件\GLSL">
       <UniqueIdentifier>{429b91c0-14ed-420d-960b-ed9643358a4a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Reflections">
+      <UniqueIdentifier>{b9d31c6d-e944-452b-b707-8cdd8cd895b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Reflections\glsl">
+      <UniqueIdentifier>{aeec03da-78ff-438c-9477-0c801500388f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Mrt">
+      <UniqueIdentifier>{05300ad9-464f-46e2-a343-53095b8d55af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Mrt\glsl">
+      <UniqueIdentifier>{cd26b6b3-35eb-4812-a4b5-6915f544cf92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -125,6 +137,12 @@
     </ClCompile>
     <ClCompile Include="OpenGL\glad\src\glad.c">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Reflections\reflections.cpp">
+      <Filter>源文件\Reflections</Filter>
+    </ClCompile>
+    <ClCompile Include="Mrt\mrt.cpp">
+      <Filter>源文件\Mrt</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +202,12 @@
     </ClInclude>
     <ClInclude Include="Bezier\BezierApp.h">
       <Filter>源文件\Bezier</Filter>
+    </ClInclude>
+    <ClInclude Include="Reflections\reflections.h">
+      <Filter>源文件\Reflections</Filter>
+    </ClInclude>
+    <ClInclude Include="Mrt\mrt.h">
+      <Filter>源文件\Mrt</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -269,6 +293,18 @@
     </None>
     <None Include="GLSL\2D.vs.glsl">
       <Filter>源文件\GLSL</Filter>
+    </None>
+    <None Include="Reflections\glsl\reflections.fs.glsl">
+      <Filter>源文件\Reflections\glsl</Filter>
+    </None>
+    <None Include="Reflections\glsl\reflections.vs.glsl">
+      <Filter>源文件\Reflections\glsl</Filter>
+    </None>
+    <None Include="Mrt\glsl\mrt.glsl">
+      <Filter>源文件\Mrt\glsl</Filter>
+    </None>
+    <None Include="Mrt\glsl\mrt.vs.glsl">
+      <Filter>源文件\Mrt\glsl</Filter>
     </None>
   </ItemGroup>
 </Project>
