@@ -115,14 +115,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -151,13 +151,17 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\ProgramFiles\Work\OpenGL\include;..\OpenGL_Project\OpenGL\glad\include;..\OpenGL_Project\OpenGL\glfw\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\OpenGL_Project\OpenGL\glfw\libs;D:\ProgramFiles\Work\OpenGL\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\OpenGL_Project\OpenGL\glad\include;..\OpenGL_Project\OpenGL\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\OpenGL_Project\OpenGL\glfw\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <IncludePath>..\OpenGL_Project\OpenGL\include;..\OpenGL_Project\OpenGL\glad\include;..\OpenGL_Project\OpenGL\glfw\include;$(IncludePath)</IncludePath>
     <LibraryPath>..\OpenGL_Project\OpenGL\libs;..\OpenGL_Project\OpenGL\glfw\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>E:\git\mygit\mytest\OpenGL_Project\OpenGL\glad;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\git\mygit\mytest\OpenGL_Project\OpenGL\glfw\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -191,11 +195,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>E:\git\mygit\mytest\OpenGL_Project\OpenGL\glfw\include;E:\git\mygit\mytest\OpenGL_Project\OpenGL\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>E:\git\mygit\mytest\OpenGL_Project\OpenGL\glfw\libs\glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

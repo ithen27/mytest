@@ -92,6 +92,9 @@ void Mrt::prepare()
 	  22, 23, 20
 	};
 
+
+	/* temp 22.8.9
+
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 	glGenBuffers(1, &EBO);
@@ -186,6 +189,7 @@ void Mrt::prepare()
 	glClearColor(1.0f, 1.0f, 1.0f, 0.0f);//初始刷新一下
 	glEnable(GL_DEPTH_TEST);
 	//
+	*/
 }
 
 

@@ -484,10 +484,10 @@ int main()
   //app = new Transformation();
   //app = new CameraApp();
   // Application* app = new ShadowApp();
-  //app = new ShadowApp();
+  app = new ShadowApp();
   //app = new BezierApp();
 //	app = new Reflections();
-	app = new Mrt();
+	//app = new Mrt();
 
   GLFWwindow* window = initWindow(app, app->defaultHeight, app->defaultWidth);
   if (window == NULL) return -1;
