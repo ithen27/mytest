@@ -17,6 +17,7 @@ using std::string;
 #include "Bezier/BezierApp.h"
 #include "Reflections/reflections.h"
 #include "Mrt/mrt.h"
+#include "GeometryShader/geometryshader.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int w, int h);
 GLFWwindow* initWindow(Application* app, int height, int width);

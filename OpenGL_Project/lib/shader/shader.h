@@ -21,9 +21,10 @@ struct GLSLCode {
   operator const char** () { return &p; }
 };
 
-class Shader {
+class Shader 
+{
 public:
-  Shader(const char* vertexPath, const char* fragmentPath);
+  Shader(const char* vertexPath, const char* fragmentPath, const char* geometryPath = NULL);
   void Use();
   unsigned int GetID();
   // uniform
