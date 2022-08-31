@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Bezier\BezierApp.cpp" />
     <ClCompile Include="Camera\CameraApp.cpp" />
+    <ClCompile Include="GeometryShader\geometryshader.cpp" />
     <ClCompile Include="lib\camera\Camera.cpp" />
     <ClCompile Include="lib\imgui\imgui.cpp" />
     <ClCompile Include="lib\imgui\imgui_demo.cpp" />
@@ -44,6 +45,7 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="Bezier\BezierApp.h" />
     <ClInclude Include="Camera\CameraApp.h" />
+    <ClInclude Include="GeometrySahder\geometryshader.h" />
     <ClInclude Include="lib\camera\Camera.h" />
     <ClInclude Include="lib\imgui\imconfig.h" />
     <ClInclude Include="lib\imgui\imgui.h" />
@@ -69,6 +71,12 @@
   <ItemGroup>
     <None Include="Camera\glsl\cube.fs.glsl" />
     <None Include="Camera\glsl\cube.vs.glsl" />
+    <None Include="GeometryShader\glsl\depth.fs.glsl" />
+    <None Include="GeometryShader\glsl\depth.vs.glsl" />
+    <None Include="GeometryShader\glsl\light.fs.glsl" />
+    <None Include="GeometryShader\glsl\light.vs.glsl" />
+    <None Include="GeometryShader\glsl\lightObject.fs.glsl" />
+    <None Include="GeometryShader\glsl\lightObject.vs.glsl" />
     <None Include="GLSL\2D.fs.glsl" />
     <None Include="GLSL\2D.vs.glsl" />
     <None Include="Light\glsl\gouraudCube.fs.glsl" />
@@ -102,14 +110,14 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{DE740840-C9DA-438C-912B-8C262898A7F8}</ProjectGuid>
     <RootNamespace>Triangles</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <ProjectName>OpenGL_CG</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

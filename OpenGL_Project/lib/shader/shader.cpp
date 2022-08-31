@@ -1,6 +1,6 @@
 #include "shader.h"
 
-Shader::Shader(const char * vertexPath, const char* fragmentPath, const char* geometryPath=NULL)
+Shader::Shader(const char * vertexPath, const char* fragmentPath, const char* geometryPath)
 {
   // ¶¥µã×ÅÉ«Æ÷
   unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER);

@@ -82,6 +82,12 @@
     <Filter Include="源文件\Mrt\glsl">
       <UniqueIdentifier>{cd26b6b3-35eb-4812-a4b5-6915f544cf92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Geometryshader">
+      <UniqueIdentifier>{b6d45b6b-dcca-4f34-a47d-bc518a942e33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Geometryshader\glsl">
+      <UniqueIdentifier>{c8c9f2dc-fada-408f-bedf-fc771201772b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -143,6 +149,9 @@
     </ClCompile>
     <ClCompile Include="Mrt\mrt.cpp">
       <Filter>源文件\Mrt</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometryShader\geometryshader.cpp">
+      <Filter>源文件\Geometryshader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +217,9 @@
     </ClInclude>
     <ClInclude Include="Mrt\mrt.h">
       <Filter>源文件\Mrt</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometrySahder\geometryshader.h">
+      <Filter>源文件\Geometryshader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -305,6 +317,24 @@
     </None>
     <None Include="Mrt\glsl\mrt.vs.glsl">
       <Filter>源文件\Mrt\glsl</Filter>
+    </None>
+    <None Include="GeometryShader\glsl\depth.fs.glsl">
+      <Filter>源文件\Geometryshader\glsl</Filter>
+    </None>
+    <None Include="GeometryShader\glsl\depth.vs.glsl">
+      <Filter>源文件\Geometryshader\glsl</Filter>
+    </None>
+    <None Include="GeometryShader\glsl\light.fs.glsl">
+      <Filter>源文件\Geometryshader\glsl</Filter>
+    </None>
+    <None Include="GeometryShader\glsl\light.vs.glsl">
+      <Filter>源文件\Geometryshader\glsl</Filter>
+    </None>
+    <None Include="GeometryShader\glsl\lightObject.fs.glsl">
+      <Filter>源文件\Geometryshader\glsl</Filter>
+    </None>
+    <None Include="GeometryShader\glsl\lightObject.vs.glsl">
+      <Filter>源文件\Geometryshader\glsl</Filter>
     </None>
   </ItemGroup>
 </Project>

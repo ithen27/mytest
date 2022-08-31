@@ -205,9 +205,9 @@ void CameraApp::render() {
   } else if (this->viewType == 2) {
     view = camera->GetCenterViewMatrix();
     this->perspectiveValue[0] = camera->Zoom;
-    float clock = glfwGetTime();
-    float camPosX = sin(clock / 1.0) * 15.0f;
-    float camPosZ = cos(clock / 1.0) * 15.0f;
+    float clock = float(glfwGetTime());
+    float camPosX = float(sin(clock / 1.0) * 15.0f);
+    float camPosZ = float(cos(clock / 1.0) * 15.0f);
     this->camera->Position = glm::vec3(camPosX, 5.0f, camPosZ);
     this->camera->Front = glm::vec3(0.0f, 0.0f, 0.0f);
     this->camera->Yaw = -90.0f;

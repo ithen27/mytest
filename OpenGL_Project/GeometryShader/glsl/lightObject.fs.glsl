@@ -12,15 +12,25 @@ uniform float diffuseStrength;
 uniform float specularStrength;
 uniform int shininess;
 
+//in vec3 fs_Normal;
+//in vec3 fs_FragPos;
+//in vec4 fs_FragPosLightSpace;
+
 in vec3 Normal;
 in vec3 FragPos;
-// in vec2 TexCoords;
 in vec4 FragPosLightSpace;
 
 uniform sampler2D shadowMap;
 
 
-void main() {
+void main() 
+{
+	
+
+	//vec3 Normal 			= fs_Normal;
+	//vec3 FragPos 			= fs_FragPos;
+	//vec4 FragPosLightSpace 	= fs_FragPosLightSpace;
+
 	vec3 ambient = ambientStrength * lightColor;
 
 	vec3 norm = normalize(Normal);
@@ -31,8 +41,6 @@ void main() {
 
 	vec3 viewDir = normalize(viewPos - FragPos);
 
-	// vec3 reflectDir = reflect(-lightDir, norm);
-	// float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);
 
 	vec3 halfwayDir = normalize(lightDir + viewDir);  
     float spec = pow(max(dot(norm, halfwayDir), 0.0), 32.0);
@@ -42,9 +50,7 @@ void main() {
     projCoords = projCoords * 0.5 + 0.5;
     float closestDepth = texture(shadowMap, projCoords.xy).r; 
     float currentDepth = projCoords.z;
-	// float bias = 0.001;
 	float bias = max(0.05 * (1.0 - dot(norm, lightDir)), 0.003);
-    // float shadow = currentDepth - bias > closestDepth  ? 1.0 : 0.0;
 
 	float shadow = 0.0;
 	vec2 texelSize = 1.0 / textureSize(shadowMap, 0);

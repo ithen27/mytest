@@ -109,9 +109,9 @@ void GeometrySahder::prepare() {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
     // 加载着色器
-    objectShader = new Shader("GeometrySahder/glsl/lightObject.vs.glsl", "GeometrySahder/glsl/lightObject.fs.glsl");
-    lightingShader = new Shader("GeometrySahder/glsl/light.vs.glsl", "GeometrySahder/glsl/light.fs.glsl");
-    depthShader = new Shader("GeometrySahder/glsl/depth.vs.glsl", "GeometrySahder/glsl/depth.fs.glsl");
+    objectShader = new Shader("GeometryShader/glsl/lightObject.vs.glsl", "GeometryShader/glsl/lightObject.fs.glsl");
+    lightingShader = new Shader("GeometryShader/glsl/light.vs.glsl", "GeometryShader/glsl/light.fs.glsl", "GeometryShader/glsl/light.gs.glsl");
+    depthShader = new Shader("GeometryShader/glsl/depth.vs.glsl", "GeometryShader/glsl/depth.fs.glsl");
 
     // 阴影纹理
 

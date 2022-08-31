@@ -84,7 +84,7 @@ void BezierApp::render() {
   // 画线
   shader->SetVec3("drawColor", lineColor);
   if (this->pointCount > 1) {
-    for (float t = 0; t < 1; t += 0.001) {
+    for (float t = 0; t < 1; t += 0.001f) {
       glm::vec2 p = this->point[0] * this->bernstein(0, this->pointCount - 1, t);
       for (int i = 1; i < this->pointCount; i++) {
         p = p + this->point[i] * this->bernstein(i, this->pointCount - 1, t);
@@ -97,7 +97,7 @@ void BezierApp::render() {
   // 辅助线
   if (this->pointCount > 1) {
     shader->SetVec3("drawColor", glm::vec3(1, 1, 1));
-    frameT += 0.01;
+    frameT += 0.01f;
     if (frameT > 1) frameT = 0;
     float t = this->frameT;
     int mCount = this->pointCount;
@@ -151,8 +151,8 @@ long long int BezierApp::getFactorial(int i) {
 // 计算 bernstein 函数
 float BezierApp::bernstein(int i, int n, float t) {
   long long int a = getFactorial(i) * getFactorial(n - i);
-  float res = getFactorial(n) / a;
-  res *= pow(t, i) * pow(1 - t, n - i);
+  float res = float(getFactorial(n) / a);
+  res *= float(pow(t, i) * pow(1 - t, n - i));
   return res;
 }
 
@@ -180,7 +180,7 @@ void BezierApp::drawPoint(int size, bool withLine, bool clear) {
   glBindVertexArray(VAO);
   glBindBuffer(GL_ARRAY_BUFFER, VBO);
   // 点的大小
-  glPointSize(size);
+  glPointSize(float(size));
   // 复制数据
   glBufferData(GL_ARRAY_BUFFER, sizeof(float) * this->vCount * 2, this->vPoint, GL_STATIC_DRAW);
   // 解析顶点数据
