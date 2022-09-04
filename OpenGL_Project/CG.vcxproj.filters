@@ -88,6 +88,12 @@
     <Filter Include="源文件\Geometryshader\glsl">
       <UniqueIdentifier>{c8c9f2dc-fada-408f-bedf-fc771201772b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\TesselationShader">
+      <UniqueIdentifier>{4cdd03a7-135d-408c-8d0f-a3f71804c67d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\TesselationShader\glsl">
+      <UniqueIdentifier>{6bbdee72-21e9-409c-a631-f8b3c854614c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -152,6 +158,9 @@
     </ClCompile>
     <ClCompile Include="GeometryShader\geometryshader.cpp">
       <Filter>源文件\Geometryshader</Filter>
+    </ClCompile>
+    <ClCompile Include="TesselationShader\ts.cpp">
+      <Filter>源文件\TesselationShader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -220,6 +229,9 @@
     </ClInclude>
     <ClInclude Include="GeometrySahder\geometryshader.h">
       <Filter>源文件\Geometryshader</Filter>
+    </ClInclude>
+    <ClInclude Include="TesselationShader\ts.h">
+      <Filter>源文件\TesselationShader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -335,6 +347,33 @@
     </None>
     <None Include="GeometryShader\glsl\lightObject.vs.glsl">
       <Filter>源文件\Geometryshader\glsl</Filter>
+    </None>
+    <None Include="TesselationShader\glsl\depth.fs.glsl">
+      <Filter>源文件\TesselationShader\glsl</Filter>
+    </None>
+    <None Include="TesselationShader\glsl\depth.vs.glsl">
+      <Filter>源文件\TesselationShader\glsl</Filter>
+    </None>
+    <None Include="TesselationShader\glsl\light.fs.glsl">
+      <Filter>源文件\TesselationShader\glsl</Filter>
+    </None>
+    <None Include="TesselationShader\glsl\light.gs.glsl">
+      <Filter>源文件\TesselationShader\glsl</Filter>
+    </None>
+    <None Include="TesselationShader\glsl\light.vs.glsl">
+      <Filter>源文件\TesselationShader\glsl</Filter>
+    </None>
+    <None Include="TesselationShader\glsl\lightObject.fs.glsl">
+      <Filter>源文件\TesselationShader\glsl</Filter>
+    </None>
+    <None Include="TesselationShader\glsl\lightObject.gs.glsl">
+      <Filter>源文件\TesselationShader\glsl</Filter>
+    </None>
+    <None Include="TesselationShader\glsl\lightObject.ts.glsl">
+      <Filter>源文件\TesselationShader\glsl</Filter>
+    </None>
+    <None Include="TesselationShader\glsl\lightObject.vs.glsl">
+      <Filter>源文件\TesselationShader\glsl</Filter>
     </None>
   </ItemGroup>
 </Project>

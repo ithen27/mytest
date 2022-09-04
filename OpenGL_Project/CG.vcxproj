@@ -38,6 +38,7 @@
     <ClCompile Include="Points\Points.cpp" />
     <ClCompile Include="Reflections\reflections.cpp" />
     <ClCompile Include="Shadow\Shadow.cpp" />
+    <ClCompile Include="TesselationShader\ts.cpp" />
     <ClCompile Include="Transformation\Transformation.cpp" />
     <ClCompile Include="triangles\Triangles.cpp" />
   </ItemGroup>
@@ -62,6 +63,7 @@
     <ClInclude Include="Points\Points.h" />
     <ClInclude Include="Reflections\reflections.h" />
     <ClInclude Include="Shadow\Shadow.h" />
+    <ClInclude Include="TesselationShader\ts.h" />
     <ClInclude Include="Transformation\Transformation.h" />
     <ClInclude Include="triangles\Triangles.h" />
   </ItemGroup>
@@ -97,6 +99,15 @@
     <None Include="Shadow\glsl\light.vs.glsl" />
     <None Include="Shadow\glsl\lightObject.fs.glsl" />
     <None Include="Shadow\glsl\lightObject.vs.glsl" />
+    <None Include="TesselationShader\glsl\depth.fs.glsl" />
+    <None Include="TesselationShader\glsl\depth.vs.glsl" />
+    <None Include="TesselationShader\glsl\light.fs.glsl" />
+    <None Include="TesselationShader\glsl\light.gs.glsl" />
+    <None Include="TesselationShader\glsl\light.vs.glsl" />
+    <None Include="TesselationShader\glsl\lightObject.fs.glsl" />
+    <None Include="TesselationShader\glsl\lightObject.gs.glsl" />
+    <None Include="TesselationShader\glsl\lightObject.ts.glsl" />
+    <None Include="TesselationShader\glsl\lightObject.vs.glsl" />
     <None Include="Transformation\glsl\cube.fs.glsl" />
     <None Include="Transformation\glsl\cube.vs.glsl" />
     <None Include="triangles\glsl\color_tri.fs.glsl" />
@@ -110,7 +121,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{DE740840-C9DA-438C-912B-8C262898A7F8}</ProjectGuid>
     <RootNamespace>Triangles</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>OpenGL_CG</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,20 +134,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>

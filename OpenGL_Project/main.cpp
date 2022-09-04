@@ -18,6 +18,7 @@ using std::string;
 #include "Reflections/reflections.h"
 #include "Mrt/mrt.h"
 #include "GeometryShader/geometryshader.h"
+#include "TesselationShader/ts.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int w, int h);
 GLFWwindow* initWindow(Application* app, int height, int width);
@@ -36,7 +37,8 @@ int main()
   //app = new BezierApp();
 //	app = new Reflections();
 	//app = new Mrt();
-  app = new GeometrySahder();
+  //app = new GeometrySahder();
+  app = new TS();
 
   GLFWwindow* window = initWindow(app, app->defaultHeight, app->defaultWidth);
   if (window == NULL) return -1;
